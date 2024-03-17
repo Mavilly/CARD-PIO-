@@ -161,8 +161,7 @@ checkoutBtn.addEventListener("click", function () {
 
   const message = encodeURIComponent(cartItems);
   const phone = "5583993506967";
-  const messageTitulo = "Olá, boa noite. Segue abaixo meu pedido:"
-  window.open(`https://wa.me/${phone}?text=${messageTitulo, message} Endereço: ${addressInput.value}`, "_blank");
+  window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank");
   cart = [];
   updateCartModal();
 });
