@@ -163,9 +163,9 @@ const cartItems = cart.map((item) => {
 
 const totalPedido = cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
 
-const message = encodeURIComponent(`Olá, boa noite. Segue meu pedido:\n${cartItems}\nTotal: R$${totalPedido}`);
+const message = encodeURIComponent(`Olá, boa noite. Segue meu pedido:\n${cartItems}\n> Endereço de entrega:\n> ${addressInput.value}\n*Total: R$${totalPedido}*`);
 const phone = "5583993506967";
-window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank");
+window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 cart = [];
 updateCartModal();
 
